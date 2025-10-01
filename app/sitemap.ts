@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/write-for-us",
     "/ask-jimmy",
     "/newsletter",
+    "/blog",
     "/privacy-policy",
     "/terms-and-conditions",
     "/disclaimers",
@@ -31,8 +32,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = routes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: route === "" ? ("daily" as const) : ("weekly" as const),
-    priority: route === "" ? 1.0 : route.startsWith("/features") ? 0.8 : 0.7,
+    changeFrequency: route === "" ? ("daily" as const) : route === "/blog" ? ("daily" as const) : ("weekly" as const),
+    priority: route === "" ? 1.0 : route.startsWith("/features") || route === "/blog" ? 0.8 : 0.7,
   }))
 
   return staticPages
