@@ -4,23 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import {
-  Heart,
-  Shield,
-  Search,
-  Users,
-  ArrowRight,
-  ChevronDown,
-  Menu,
-  X,
-  BookOpen,
-  MessageCircle,
-  Headphones,
-  CheckCircle,
-  Lock,
-  Star,
-  Download,
-} from "lucide-react"
+import { Heart, Shield, Search, Users, ArrowRight, ChevronDown, Menu, X, BookOpen, MessageCircle, Headphones, CircleCheck as CheckCircle, Lock, Star, Download } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
