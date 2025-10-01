@@ -144,90 +144,87 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b">
-      <div className="container mx-auto px-4">
-        <div className="py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <Image
-              src="/assets/pleaze-logo-new.png"
-              alt="Pleaze Logo"
-              width={40}
-              height={40}
-              className="rounded-lg"
-            />
-            <span className="text-2xl font-bold bg-gradient-to-r from-[#17335F] to-[#788ED4] bg-clip-text text-transparent">
-              Pleaze
-            </span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            <div
-              className="relative"
-              onMouseEnter={() => handleMouseEnter("features")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button className="flex items-center text-[#17335F] hover:text-[#788ED4] transition-colors font-medium">
-                Features <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-            </div>
-
-            <div
-              className="relative"
-              onMouseEnter={() => handleMouseEnter("about")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button className="flex items-center text-[#17335F] hover:text-[#788ED4] transition-colors font-medium">
-                About <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-            </div>
-
-            <div
-              className="relative"
-              onMouseEnter={() => handleMouseEnter("community")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button className="flex items-center text-[#17335F] hover:text-[#788ED4] transition-colors font-medium">
-                Contact <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-            </div>
-
-            <div
-              className="relative"
-              onMouseEnter={() => handleMouseEnter("resources")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button className="flex items-center text-[#17335F] hover:text-[#788ED4] transition-colors font-medium">
-                Resources <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-            </div>
-          </nav>
-
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Link href="/download" className="inline-block">
-              <Button className="bg-[#67D8AF] hover:bg-[#17335F] text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 min-h-[44px]">
-                Download App
-              </Button>
+      <div
+        className="relative"
+        onMouseLeave={handleMouseLeave}
+      >
+        <div className="container mx-auto px-4">
+          <div className="py-4 flex items-center justify-between">
+            <Link href="/" className="flex items-center space-x-2">
+              <Image
+                src="/assets/pleaze-logo-new.png"
+                alt="Pleaze Logo"
+                width={40}
+                height={40}
+                className="rounded-lg"
+              />
+              <span className="text-2xl font-bold bg-gradient-to-r from-[#17335F] to-[#788ED4] bg-clip-text text-transparent">
+                Pleaze
+              </span>
             </Link>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            className="lg:hidden"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-8">
+              <div
+                className="relative"
+                onMouseEnter={() => handleMouseEnter("features")}
+              >
+                <button className="flex items-center text-[#17335F] hover:text-[#788ED4] transition-colors font-medium">
+                  Features <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+              </div>
+
+              <div
+                className="relative"
+                onMouseEnter={() => handleMouseEnter("about")}
+              >
+                <button className="flex items-center text-[#17335F] hover:text-[#788ED4] transition-colors font-medium">
+                  About <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+              </div>
+
+              <div
+                className="relative"
+                onMouseEnter={() => handleMouseEnter("community")}
+              >
+                <button className="flex items-center text-[#17335F] hover:text-[#788ED4] transition-colors font-medium">
+                  Contact <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+              </div>
+
+              <div
+                className="relative"
+                onMouseEnter={() => handleMouseEnter("resources")}
+              >
+                <button className="flex items-center text-[#17335F] hover:text-[#788ED4] transition-colors font-medium">
+                  Resources <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+              </div>
+            </nav>
+
+            {/* CTA Button */}
+            <div className="hidden lg:block">
+              <Link href="/download" className="inline-block">
+                <Button className="bg-[#67D8AF] hover:bg-[#17335F] text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 min-h-[44px]">
+                  Download App
+                </Button>
+              </Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <Button
+              variant="ghost"
+              className="lg:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
         </div>
 
         {/* Mega Menu Dropdown */}
         {activeDropdown && (
-          <div
-            className="absolute left-0 right-0 bg-white shadow-2xl border-t"
-            onMouseEnter={() => setActiveDropdown(activeDropdown)}
-            onMouseLeave={handleMouseLeave}
-          >
+          <div className="absolute left-0 right-0 bg-white shadow-2xl border-t">
             <div className="container mx-auto px-4 py-8">
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {megaMenuContent[activeDropdown as keyof typeof megaMenuContent]?.map((item, index) => (
