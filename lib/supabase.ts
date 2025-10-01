@@ -42,45 +42,69 @@ export interface BlogCategory {
 }
 
 export async function getBlogPosts(limit = 10, offset = 0) {
-  const { data, error } = await supabase
-    .from("blog_posts")
-    .select(`
-      *,
-      author:blog_authors(*),
-      category:blog_categories(*)
-    `)
-    .eq("status", "published")
-    .order("published_at", { ascending: false })
-    .range(offset, offset + limit - 1)
+  try {
+    const { data, error } = await supabase
+      .from("blog_posts")
+      .select(`
+        *,
+        author:blog_authors(*),
+        category:blog_categories(*)
+      `)
+      .eq("status", "published")
+      .order("published_at", { ascending: false })
+      .range(offset, offset + limit - 1)
 
-  if (error) throw error
-  return data as BlogPost[]
+    if (error) {
+      console.error("Error fetching blog posts:", error)
+      return []
+    }
+    return (data as BlogPost[]) || []
+  } catch (error) {
+    console.error("Error connecting to Supabase:", error)
+    return []
+  }
 }
 
 export async function getBlogPostBySlug(slug: string) {
-  const { data, error } = await supabase
-    .from("blog_posts")
-    .select(`
-      *,
-      author:blog_authors(*),
-      category:blog_categories(*)
-    `)
-    .eq("slug", slug)
-    .eq("status", "published")
-    .maybeSingle()
+  try {
+    const { data, error } = await supabase
+      .from("blog_posts")
+      .select(`
+        *,
+        author:blog_authors(*),
+        category:blog_categories(*)
+      `)
+      .eq("slug", slug)
+      .eq("status", "published")
+      .maybeSingle()
 
-  if (error) throw error
-  return data as BlogPost | null
+    if (error) {
+      console.error("Error fetching blog post:", error)
+      return null
+    }
+    return data as BlogPost | null
+  } catch (error) {
+    console.error("Error connecting to Supabase:", error)
+    return null
+  }
 }
 
 export async function getBlogCategories() {
-  const { data, error } = await supabase
-    .from("blog_categories")
-    .select("*")
-    .order("name")
+  try {
+    const { data, error } = await supabase
+      .from("blog_categories")
+      .select("*")
+      .order("name")
 
-  if (error) throw error
-  return data as BlogCategory[]
+    if (error) {
+      console.error("Error fetching blog categories:", error)
+      return []
+    }
+    return (data as BlogCategory[]) || []
+  } catch (error) {
+    console.error("Error connecting to Supabase:", error)
+    return []
+  }
 }
 
 export async function incrementPostViewCount(postId: string) {
