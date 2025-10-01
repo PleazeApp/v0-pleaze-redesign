@@ -1,4 +1,9 @@
 import Footer from "@/components/footer"
 
-// Page component code here
-;<Footer />
+export default function HelpButtonsPage() {
+  return (
+    <div>
+      <Footer />
+    </div>
+  )
+}
