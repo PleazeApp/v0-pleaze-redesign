@@ -11,22 +11,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
-import {
-  MessageCircle,
-  Heart,
-  Shield,
-  Send,
-  ArrowRight,
-  ChevronDown,
-  Menu,
-  X,
-  BookOpen,
-  Headphones,
-  Users,
-  CheckCircle,
-  Lock,
-  UserCheck,
-} from "lucide-react"
+import { MessageCircle, Heart, Shield, Send, ArrowRight, ChevronDown, Menu, X, BookOpen, Headphones, Users, CircleCheck as CheckCircle, Lock, UserCheck } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -54,8 +39,8 @@ export default function AskJimmyPage() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleCheckboxChange = (name: string, checked: boolean) => {
-    setFormData((prev) => ({ ...prev, [name]: checked }))
+  const handleCheckboxChange = (name: string, checked: boolean | string) => {
+    setFormData((prev) => ({ ...prev, [name]: checked === true }))
   }
 
   const handleSubmit = (e: React.FormEvent) => {

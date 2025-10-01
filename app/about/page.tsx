@@ -1,5 +1,4 @@
-"use client"
-
+import PageLayout from "@/components/layout/page-layout"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -8,45 +7,8 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function AboutPage() {
-  const currentYear = new Date().getFullYear()
-
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header - Simple version for inner pages */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b">
-        <div className="container mx-auto px-4">
-          <div className="py-4 flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2">
-              <Image
-                src="/assets/pleaze-logo-new.png"
-                alt="Pleaze Logo"
-                width={40}
-                height={40}
-                className="rounded-lg"
-              />
-              <span className="text-2xl font-bold bg-gradient-to-r from-[#17335F] to-[#788ED4] bg-clip-text text-transparent">
-                Pleaze
-              </span>
-            </Link>
-
-            <nav className="hidden lg:flex items-center space-x-8">
-              <Link href="/" className="text-[#17335F] hover:text-[#788ED4] transition-colors">
-                Home
-              </Link>
-              <Link href="/features" className="text-[#17335F] hover:text-[#788ED4] transition-colors">
-                Features
-              </Link>
-              <Link href="/contact" className="text-[#17335F] hover:text-[#788ED4] transition-colors">
-                Contact
-              </Link>
-            </nav>
-
-            <Button className="bg-[#67D8AF] hover:bg-[#17335F] text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 min-h-[44px]">
-              Download App
-            </Button>
-          </div>
-        </div>
-      </header>
+    <PageLayout headerVariant="simple">
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#17335F] via-[#788ED4] to-[#67D8AF]">
@@ -623,118 +585,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#17335F] text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <Image
-                  src="/assets/pleaze-logo-new.png"
-                  alt="Pleaze Logo"
-                  width={32}
-                  height={32}
-                  className="rounded-lg"
-                />
-                <span className="text-xl font-bold">Pleaze</span>
-              </div>
-              <p className="text-white/80">The go-to app for Mental Health and Addiction support.</p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-white/80">
-                <li>
-                  <Link href="/" className="hover:text-white transition-colors">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" className="hover:text-white transition-colors">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/features" className="hover:text-white transition-colors">
-                    Features
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-white transition-colors">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Support</h4>
-              <ul className="space-y-2 text-white/80">
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Help Center
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-white transition-colors">
-                    Contact Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/privacy-policy" className="hover:text-white transition-colors">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/terms-and-conditions" className="hover:text-white transition-colors">
-                    Terms of Service
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Download</h4>
-              <div className="space-y-4">
-                <Link
-                  href="https://play.google.com/store/apps/details?id=com.pleaze.pleaze_app&pcampaignid=web_share"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block relative group"
-                >
-                  <Image
-                    src="/assets/mobile-play-store-badge.png"
-                    alt="Get it on Google Play"
-                    width={180}
-                    height={60}
-                    className="rounded-lg hover:opacity-90 transition-opacity cursor-pointer hover:scale-105 transition-all duration-300"
-                    style={{ width: "180px", height: "60px", objectFit: "fill" }}
-                  />
-                </Link>
-                <Link
-                  href="https://apps.apple.com/ie/app/pleaze-mental-health-help/id6502616534"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block relative group"
-                >
-                  <Image
-                    src="/assets/mobile-app-store-badge.png"
-                    alt="Download on the App Store"
-                    width={180}
-                    height={60}
-                    className="rounded-lg hover:opacity-90 transition-opacity cursor-pointer hover:scale-105 transition-all duration-300"
-                    style={{ width: "180px", height: "60px", objectFit: "fill" }}
-                  />
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/60">
-            <p>&copy; {currentYear} Pleaze. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </PageLayout>
   )
 }

@@ -58,7 +58,7 @@ export default function ShareYourStoryPage() {
     }))
   }
 
-  const handleCheckboxChange = (name: string, checked: boolean) => {
+  const handleCheckboxChange = (name: string, checked: boolean | string) => {
     setFormData((prev) => ({ ...prev, [name]: checked }))
   }
 
