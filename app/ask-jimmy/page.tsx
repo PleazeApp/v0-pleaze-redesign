@@ -156,6 +156,8 @@ export default function AskJimmyPage() {
 
           {/* Dropdown Content */}
           {activeDropdown && (
+              )
+              }
             <div
               className="absolute left-0 right-0 bg-gradient-to-r from-[#17335F] to-[#788ED4] shadow-xl border-t"
               onMouseEnter={() => setActiveDropdown(activeDropdown)}
@@ -186,6 +188,11 @@ export default function AskJimmyPage() {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
+                    )
+                    }
+            )
+            )
+            }
             <div className="lg:hidden bg-white border-t">
               <div className="py-4 space-y-4">
                 <Link href="/about" className="block text-[#17335F] hover:text-[#788ED4] transition-colors">
@@ -621,5 +628,8 @@ export default function AskJimmyPage() {
 
       {/* Footer */}
       )
+  )
+}
+
   )
 }
