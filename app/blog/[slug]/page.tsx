@@ -48,7 +48,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   })
 
   return (
-    <PageLayout headerVariant="simple">
+    <PageLayout>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}

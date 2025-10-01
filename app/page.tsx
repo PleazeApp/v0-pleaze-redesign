@@ -40,7 +40,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header variant="full" />
+      <Header />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">

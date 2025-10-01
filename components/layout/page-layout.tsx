@@ -4,13 +4,12 @@ import Footer from "@/components/footer"
 
 interface PageLayoutProps {
   children: React.ReactNode
-  headerVariant?: "full" | "simple"
 }
 
-export default function PageLayout({ children, headerVariant = "simple" }: PageLayoutProps) {
+export default function PageLayout({ children }: PageLayoutProps) {
   return (
     <div className="min-h-screen bg-white">
-      <Header variant={headerVariant} />
+      <Header />
       <main>{children}</main>
       <Footer />
     </div>

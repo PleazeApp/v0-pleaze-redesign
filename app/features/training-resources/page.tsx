@@ -2,13 +2,13 @@ import PageLayout from "@/components/layout/page-layout"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { GraduationCap, Award, Users, BookOpen, CheckCircle, ArrowRight, Star, TrendingUp, Target } from "lucide-react"
+import { GraduationCap, Award, Users, BookOpen, CircleCheck as CheckCircle, ArrowRight, Star, TrendingUp, Target } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
 export default function TrainingResourcesPage() {
   return (
-    <PageLayout headerVariant="simple">
+    <PageLayout>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#17335F] via-[#788ED4] to-[#67D8AF]">
         <div className="absolute inset-0 bg-black/10"></div>

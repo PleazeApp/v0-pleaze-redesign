@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export default function HelpButtonsPage() {
   return (
-    <PageLayout headerVariant="simple">
+    <PageLayout>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#17335F] via-[#788ED4] to-[#67D8AF]">
         <div className="absolute inset-0 bg-black/10"></div>

@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export default function AboutPage() {
   return (
-    <PageLayout headerVariant="simple">
+    <PageLayout>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#17335F] via-[#788ED4] to-[#67D8AF]">
