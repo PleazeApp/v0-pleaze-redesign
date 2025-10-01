@@ -1,9 +1,8 @@
 import Link from "next/link"
-import Footer from "@/components/footer"
 
 export default function SourcesPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
@@ -29,8 +28,8 @@ export default function SourcesPage() {
                 Download App
               </Link>
             </nav>
-          </div>
-        </div>
+            )
+          )
       </header>
 
       {/* Hero Section */}
@@ -40,7 +39,7 @@ export default function SourcesPage() {
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
             Credible sources and research that inform our mental health and addiction support resources
           </p>
-        </div>
+          )
       </section>
 
       {/* Sources Content */}
@@ -53,7 +52,7 @@ export default function SourcesPage() {
               <p className="text-white/90">
                 Comprehensive resources and research on suicide prevention, understanding, and support
               </p>
-            </div>
+              )
 
             {/* Understanding Suicide */}
             <div className="bg-blue-50 p-6 border-l-4 border-[#17335F]">
@@ -100,7 +99,7 @@ export default function SourcesPage() {
                   </a>
                 </li>
               </ul>
-            </div>
+              )
 
             {/* Warning Signs and Risk Factors */}
             <div className="bg-blue-50 p-6 border-l-4 border-[#17335F] mt-4">
@@ -137,7 +136,7 @@ export default function SourcesPage() {
                   </a>
                 </li>
               </ul>
-            </div>
+              )
 
             {/* Suicide Prevention */}
             <div className="bg-blue-50 p-6 border-l-4 border-[#17335F] mt-4">
@@ -194,7 +193,7 @@ export default function SourcesPage() {
                   </a>
                 </li>
               </ul>
-            </div>
+              )
 
             {/* Questions and Misconceptions */}
             <div className="bg-blue-50 p-6 border-l-4 border-[#17335F] mt-4">
@@ -251,8 +250,8 @@ export default function SourcesPage() {
                   </a>
                 </li>
               </ul>
-            </div>
-          </div>
+              )
+            )
 
           {/* Addiction Section */}
           <div className="mb-16">
@@ -261,7 +260,7 @@ export default function SourcesPage() {
               <p className="text-white/90">
                 Evidence-based resources on addiction understanding, prevention, and recovery support
               </p>
-            </div>
+              )
 
             {/* Understanding Addiction */}
             <div className="bg-green-50 p-6 border-l-4 border-[#67D8AF]">
@@ -298,7 +297,7 @@ export default function SourcesPage() {
                   </a>
                 </li>
               </ul>
-            </div>
+              )
 
             {/* Warning Signs of Addiction */}
             <div className="bg-green-50 p-6 border-l-4 border-[#67D8AF] mt-4">
@@ -355,7 +354,7 @@ export default function SourcesPage() {
                   </a>
                 </li>
               </ul>
-            </div>
+              )
 
             {/* Risk Factors and Influences */}
             <div className="bg-green-50 p-6 border-l-4 border-[#67D8AF] mt-4">
@@ -392,7 +391,7 @@ export default function SourcesPage() {
                   </a>
                 </li>
               </ul>
-            </div>
+              )
 
             {/* The Cycle of Addiction */}
             <div className="bg-green-50 p-6 border-l-4 border-[#67D8AF] mt-4">
@@ -429,7 +428,7 @@ export default function SourcesPage() {
                   </a>
                 </li>
               </ul>
-            </div>
+              )
 
             {/* The Recovery Journey */}
             <div className="bg-green-50 p-6 border-l-4 border-[#67D8AF] mt-4">
@@ -466,7 +465,7 @@ export default function SourcesPage() {
                   </a>
                 </li>
               </ul>
-            </div>
+              )
 
             {/* How to Support Someone */}
             <div className="bg-green-50 p-6 border-l-4 border-[#67D8AF] mt-4">
@@ -513,7 +512,7 @@ export default function SourcesPage() {
                   </a>
                 </li>
               </ul>
-            </div>
+              )
 
             {/* Questions and Misconceptions */}
             <div className="bg-green-50 p-6 border-l-4 border-[#67D8AF] mt-4">
@@ -550,7 +549,7 @@ export default function SourcesPage() {
                   </a>
                 </li>
               </ul>
-            </div>
+              )
 
             {/* Conclusion */}
             <div className="bg-green-50 p-6 border-l-4 border-[#67D8AF] mt-4">
@@ -567,7 +566,7 @@ export default function SourcesPage() {
                   </a>
                 </li>
               </ul>
-            </div>
+              )
 
             {/* Addiction Quiz */}
             <div className="bg-green-50 p-6 border-l-4 border-[#67D8AF] mt-4">
@@ -585,8 +584,8 @@ export default function SourcesPage() {
                   </a>
                 </li>
               </ul>
-            </div>
-          </div>
+              )
+            )
 
           {/* Disclaimer */}
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
@@ -596,11 +595,13 @@ export default function SourcesPage() {
               Pleaze is not responsible for the content of external sites. Always consult with qualified healthcare
               professionals for medical advice and treatment.
             </p>
-          </div>
-        </div>
+            )
+          )
       </section>
 
-      <Footer />
-    </div>
+      )
+  )
+}
+
   )
 }

@@ -1,5 +1,4 @@
 "use client"
-import Footer from "@/components/footer"
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -75,7 +74,7 @@ export default function ForIndividualsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* Header - Matching Homepage Design */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b">
         <div className="container mx-auto px-4">
@@ -108,7 +107,7 @@ export default function ForIndividualsPage() {
                 <button className="flex items-center text-[#17335F] hover:text-[#788ED4] transition-colors">
                   Benefits <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
-              </div>
+                )
 
               <Link href="/#how-it-works" className="text-[#17335F] hover:text-[#788ED4] transition-colors">
                 How it Works
@@ -122,7 +121,7 @@ export default function ForIndividualsPage() {
                 <button className="flex items-center text-[#17335F] hover:text-[#788ED4] transition-colors">
                   Support <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
-              </div>
+                )
 
               <Link href="/#blog" className="text-[#17335F] hover:text-[#788ED4] transition-colors">
                 Blog
@@ -134,13 +133,13 @@ export default function ForIndividualsPage() {
               <Button className="bg-[#67D8AF] hover:bg-[#17335F] text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 min-h-[44px]">
                 Download App
               </Button>
-            </div>
+              )
 
             {/* Mobile Menu Button */}
             <Button className="lg:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
-          </div>
+            )
 
           {/* Dropdown Content */}
           {activeDropdown && (
@@ -159,17 +158,17 @@ export default function ForIndividualsPage() {
                       <div className="flex items-start space-x-4">
                         <div className="w-12 h-12 bg-[#67D8AF] rounded-full flex items-center justify-center text-white flex-shrink-0">
                           {item.icon}
-                        </div>
+                          )
                         <div>
                           <h3 className="text-white font-semibold text-lg mb-2">{item.title}</h3>
                           <p className="text-white/80 text-sm leading-relaxed">{item.description}</p>
-                        </div>
-                      </div>
-                    </div>
+                          )
+                        )
+                      )
                   ))}
-                </div>
-              </div>
-            </div>
+                  )
+                )
+              )
           )}
 
           {/* Mobile Menu */}
@@ -194,16 +193,16 @@ export default function ForIndividualsPage() {
                 <Button className="w-full bg-[#67D8AF] hover:bg-[#17335F] text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 min-h-[44px] text-base font-medium">
                   Download App
                 </Button>
-              </div>
-            </div>
+                )
+              )
           )}
-        </div>
+          )
       </header>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#17335F] via-[#788ED4] to-[#67D8AF] opacity-90"></div>
-        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#17335F] via-[#788ED4] to-[#67D8AF] opacity-90">  )
+        <div className="absolute inset-0 bg-black/10">  )
 
         <div className="relative container mx-auto px-4 py-20 lg:py-32 z-20">
           <div className="text-center text-white space-y-8 max-w-4xl mx-auto">
@@ -222,24 +221,24 @@ export default function ForIndividualsPage() {
               <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
                 Pleaze gives you 24/7 resources, a safe place to share your story, and a community that understands.
               </p>
-            </div>
+              )
 
             <div className="flex flex-col items-center space-y-4">
               <div className="flex items-center space-x-6">
                 <div className="flex items-center gap-2">
                   <Shield className="w-5 h-5 text-white/90" />
                   <span className="text-white/90 text-sm font-medium">Safe & Private</span>
-                </div>
+                  )
                 <div className="flex items-center gap-2">
                   <Heart className="w-5 h-5 text-white/90" />
                   <span className="text-white/90 text-sm font-medium">Judgment-Free</span>
-                </div>
+                  )
                 <div className="flex items-center gap-2">
                   <Users className="w-5 h-5 text-white/90" />
                   <span className="text-white/90 text-sm font-medium">Community Support</span>
-                </div>
-              </div>
-            </div>
+                  )
+                )
+              )
 
             <Button className="bg-white text-[#17335F] hover:bg-white/90 px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 min-h-[56px] text-lg font-semibold">
               Start Your Journey Today
@@ -257,12 +256,12 @@ export default function ForIndividualsPage() {
                     height={400}
                     className="drop-shadow-2xl rounded-xl"
                   />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#67D8AF]/20 to-[#788ED4]/20 blur-3xl"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+                  )
+                <div className="absolute inset-0 bg-gradient-to-r from-[#67D8AF]/20 to-[#788ED4]/20 blur-3xl">  )
+                )
+              )
+            )
+          )
       </section>
 
       {/* Pain + Empathy Section */}
@@ -276,35 +275,35 @@ export default function ForIndividualsPage() {
                 <div className="space-y-4">
                   <div className="w-12 h-12 bg-[#D28FF2] rounded-full flex items-center justify-center">
                     <Heart className="h-6 w-6 text-white" />
-                  </div>
+                    )
                   <h3 className="text-xl font-bold text-[#17335F]">The Loneliness</h3>
                   <p className="text-gray-700 leading-relaxed">
                     Feeling like no one understands what you're going through. Like you're fighting this battle
                     completely alone.
                   </p>
-                </div>
+                  )
 
                 <div className="space-y-4">
                   <div className="w-12 h-12 bg-[#FF245F] rounded-full flex items-center justify-center">
                     <Shield className="h-6 w-6 text-white" />
-                  </div>
+                    )
                   <h3 className="text-xl font-bold text-[#17335F]">The Stigma</h3>
                   <p className="text-gray-700 leading-relaxed">
                     Worrying about judgment from family, friends, or colleagues. Feeling ashamed to ask for help.
                   </p>
-                </div>
+                  )
 
                 <div className="space-y-4">
                   <div className="w-12 h-12 bg-[#FFF6A6] rounded-full flex items-center justify-center">
                     <Search className="h-6 w-6 text-black" />
-                  </div>
+                    )
                   <h3 className="text-xl font-bold text-[#17335F]">The Confusion</h3>
                   <p className="text-gray-700 leading-relaxed">
                     Not knowing where to start, what resources to trust, or how to take the first step towards recovery.
                   </p>
-                </div>
-              </div>
-            </div>
+                  )
+                )
+              )
 
             <Card className="border-0 shadow-lg bg-gradient-to-r from-[#17335F]/5 to-[#67D8AF]/5">
               <CardContent className="p-8">
@@ -314,8 +313,8 @@ export default function ForIndividualsPage() {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </div>
+            )
+          )
       </section>
 
       {/* How Pleaze Helps Section */}
@@ -326,7 +325,7 @@ export default function ForIndividualsPage() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Comprehensive support designed specifically for your journey
             </p>
-          </div>
+            )
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* No More Suffering Alone */}
@@ -335,9 +334,9 @@ export default function ForIndividualsPage() {
                 <div className="flex items-center space-x-4">
                   <div className="w-16 h-16 bg-[#D28FF2] rounded-2xl flex items-center justify-center flex-shrink-0">
                     <Heart className="h-8 w-8 text-white" />
-                  </div>
+                    )
                   <h3 className="text-2xl font-bold text-[#17335F]">No More Suffering Alone</h3>
-                </div>
+                  )
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Help Is a Button Away. Instantly connect with your support network when you need it most. No more
                   struggling in silence.
@@ -345,7 +344,7 @@ export default function ForIndividualsPage() {
                 <div className="flex items-center text-[#67D8AF] font-medium">
                   <CheckCircle className="h-5 w-5 mr-2" />
                   Instant help buttons for crisis moments
-                </div>
+                  )
               </CardContent>
             </Card>
 
@@ -355,9 +354,9 @@ export default function ForIndividualsPage() {
                 <div className="flex items-center space-x-4">
                   <div className="w-16 h-16 bg-[#FFF6A6] rounded-2xl flex items-center justify-center flex-shrink-0">
                     <Search className="h-8 w-8 text-black" />
-                  </div>
+                    )
                   <h3 className="text-2xl font-bold text-[#17335F]">No More Searching Endlessly</h3>
-                </div>
+                  )
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Find, Ask, and Get Support. Access curated resources, expert advice, and community wisdom all in one
                   trusted place.
@@ -365,7 +364,7 @@ export default function ForIndividualsPage() {
                 <div className="flex items-center text-[#67D8AF] font-medium">
                   <CheckCircle className="h-5 w-5 mr-2" />
                   Curated news feed with trusted information
-                </div>
+                  )
               </CardContent>
             </Card>
 
@@ -375,9 +374,9 @@ export default function ForIndividualsPage() {
                 <div className="flex items-center space-x-4">
                   <div className="w-16 h-16 bg-[#FF245F] rounded-2xl flex items-center justify-center flex-shrink-0">
                     <Shield className="h-8 w-8 text-white" />
-                  </div>
+                    )
                   <h3 className="text-2xl font-bold text-[#17335F]">Take Control of Your Journey</h3>
-                </div>
+                  )
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Your Mental Health and Addiction Recovery, Your Way. Use our personal hub to track progress, journal
                   thoughts, and build your coping toolkit.
@@ -385,7 +384,7 @@ export default function ForIndividualsPage() {
                 <div className="flex items-center text-[#67D8AF] font-medium">
                   <CheckCircle className="h-5 w-5 mr-2" />
                   Personal hub with journaling and coping tools
-                </div>
+                  )
               </CardContent>
             </Card>
 
@@ -395,9 +394,9 @@ export default function ForIndividualsPage() {
                 <div className="flex items-center space-x-4">
                   <div className="w-16 h-16 bg-[#61EDEA] rounded-2xl flex items-center justify-center flex-shrink-0">
                     <Users className="h-8 w-8 text-black" />
-                  </div>
+                    )
                   <h3 className="text-2xl font-bold text-[#17335F]">Learn How You Can Help Others</h3>
-                </div>
+                  )
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Turn Your Experience Into Strength. Complete training courses to become a certified peer supporter and
                   help others on their journey.
@@ -405,11 +404,11 @@ export default function ForIndividualsPage() {
                 <div className="flex items-center text-[#67D8AF] font-medium">
                   <CheckCircle className="h-5 w-5 mr-2" />
                   Training resources and certification badges
-                </div>
+                  )
               </CardContent>
             </Card>
-          </div>
-        </div>
+            )
+          )
       </section>
 
       {/* Proof & Trust Section */}
@@ -425,7 +424,7 @@ export default function ForIndividualsPage() {
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                       ))}
-                    </div>
+                      )
                     <blockquote className="text-lg text-gray-700 italic leading-relaxed">
                       "Pleaze gave me hope when I had none left. The help buttons saved my life, and the community
                       showed me I wasn't alone. For the first time in years, I feel like I have control over my
@@ -434,13 +433,13 @@ export default function ForIndividualsPage() {
                     <div className="flex items-center space-x-3">
                       <div className="w-10 h-10 bg-[#67D8AF] rounded-full flex items-center justify-center">
                         <Users className="h-5 w-5 text-white" />
-                      </div>
+                        )
                       <div>
                         <p className="font-semibold text-[#17335F]">Sarah M.</p>
                         <p className="text-sm text-gray-600">Pleaze User, Dublin</p>
-                      </div>
-                    </div>
-                  </div>
+                        )
+                      )
+                    )
                 </CardContent>
               </Card>
 
@@ -450,7 +449,7 @@ export default function ForIndividualsPage() {
                   <div className="text-center space-y-6">
                     <div className="w-20 h-20 bg-[#17335F] rounded-full flex items-center justify-center mx-auto">
                       <Lock className="h-10 w-10 text-white" />
-                    </div>
+                      )
                     <div className="space-y-4">
                       <h3 className="text-2xl font-bold text-[#17335F]">Privacy Guarantee</h3>
                       <p className="text-lg text-gray-700 leading-relaxed">
@@ -460,14 +459,14 @@ export default function ForIndividualsPage() {
                       <div className="flex items-center justify-center text-[#67D8AF] font-medium">
                         <CheckCircle className="h-5 w-5 mr-2" />
                         GDPR Compliant & Secure
-                      </div>
-                    </div>
-                  </div>
+                        )
+                      )
+                    )
                 </CardContent>
               </Card>
-            </div>
-          </div>
-        </div>
+              )
+            )
+          )
       </section>
 
       {/* Conversion Section */}
@@ -495,8 +494,8 @@ export default function ForIndividualsPage() {
                     className="rounded-xl hover:opacity-95 transition-all duration-300 cursor-pointer drop-shadow-2xl group-hover:drop-shadow-3xl"
                     style={{ width: "200px", height: "70px", objectFit: "fill" }}
                   />
-                  <div className="absolute inset-0 bg-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+                  <div className="absolute inset-0 bg-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">  )
+                  )
               </Link>
               <Link
                 href="https://apps.apple.com/ie/app/pleaze-mental-health-help/id6502616534"
@@ -513,35 +512,34 @@ export default function ForIndividualsPage() {
                     className="rounded-xl hover:opacity-95 transition-all duration-300 cursor-pointer drop-shadow-2xl group-hover:drop-shadow-3xl"
                     style={{ width: "200px", height: "70px", objectFit: "fill" }}
                   />
-                  <div className="absolute inset-0 bg-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+                  <div className="absolute inset-0 bg-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">  )
+                  )
               </Link>
-            </div>
+              )
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-white/80 mt-8">
               <div className="flex items-center gap-2">
                 <Download className="w-5 h-5" />
                 <span className="text-sm font-medium">Free Forever</span>
-              </div>
+                )
               <div className="flex items-center gap-2">
                 <Shield className="w-5 h-5" />
                 <span className="text-sm font-medium">Private & Secure</span>
-              </div>
+                )
               <div className="flex items-center gap-2">
                 <Heart className="w-5 h-5" />
                 <span className="text-sm font-medium">Judgment-Free Zone</span>
-              </div>
-            </div>
+                )
+              )
 
             <p className="text-white/70 text-lg">
               Join thousands who have already started their journey to recovery with Pleaze.
             </p>
-          </div>
-        </div>
+            )
+          )
       </section>
 
       {/* Footer */}
-      <Footer />
-    </div>
+      )
   )
 }

@@ -1,9 +1,6 @@
 "use client"
 
 import type React from "react"
-import Header from "@/components/layout/header"
-import Footer from "@/components/footer"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -39,9 +36,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-
+    <>
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         {/* Fallback gradient background - always visible */}
@@ -665,8 +660,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <Footer />
-    </div>
+    </>
   )
 }

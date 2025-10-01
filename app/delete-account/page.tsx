@@ -1,9 +1,8 @@
 import Link from "next/link"
-import Footer from "@/components/footer"
 
 export default function DeleteAccountPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
@@ -29,8 +28,8 @@ export default function DeleteAccountPage() {
                 Download App
               </Link>
             </nav>
-          </div>
-        </div>
+            )
+          )
       </header>
 
       {/* Hero Section */}
@@ -40,7 +39,7 @@ export default function DeleteAccountPage() {
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
             Follow these simple steps to permanently delete your Pleaze account
           </p>
-        </div>
+          )
       </section>
 
       {/* Steps Section */}
@@ -51,67 +50,67 @@ export default function DeleteAccountPage() {
             <div className="flex items-start space-x-6">
               <div className="flex-shrink-0 w-12 h-12 bg-[#17335F] text-white rounded-full flex items-center justify-center font-bold text-lg">
                 1
-              </div>
+                )
               <div>
                 <h3 className="text-xl font-semibold text-[#17335F] mb-2">Log into the app</h3>
                 <p className="text-gray-700">
                   Open the Pleaze mobile application on your device and sign in with your credentials.
                 </p>
-              </div>
-            </div>
+                )
+              )
 
             {/* Step 2 */}
             <div className="flex items-start space-x-6">
               <div className="flex-shrink-0 w-12 h-12 bg-[#17335F] text-white rounded-full flex items-center justify-center font-bold text-lg">
                 2
-              </div>
+                )
               <div>
                 <h3 className="text-xl font-semibold text-[#17335F] mb-2">Navigate to your hub</h3>
                 <p className="text-gray-700">
                   Go to your personal hub section within the app where you can access your profile and settings.
                 </p>
-              </div>
-            </div>
+                )
+              )
 
             {/* Step 3 */}
             <div className="flex items-start space-x-6">
               <div className="flex-shrink-0 w-12 h-12 bg-[#17335F] text-white rounded-full flex items-center justify-center font-bold text-lg">
                 3
-              </div>
+                )
               <div>
                 <h3 className="text-xl font-semibold text-[#17335F] mb-2">Click on your profile</h3>
                 <p className="text-gray-700">
                   Access your profile settings by tapping on your profile section in the hub.
                 </p>
-              </div>
-            </div>
+                )
+              )
 
             {/* Step 4 */}
             <div className="flex items-start space-x-6">
               <div className="flex-shrink-0 w-12 h-12 bg-[#17335F] text-white rounded-full flex items-center justify-center font-bold text-lg">
                 4
-              </div>
+                )
               <div>
                 <h3 className="text-xl font-semibold text-[#17335F] mb-2">Click on delete</h3>
                 <p className="text-gray-700">
                   Look for the delete account option in your profile settings and tap on it.
                 </p>
-              </div>
-            </div>
+                )
+              )
 
             {/* Step 5 */}
             <div className="flex items-start space-x-6">
               <div className="flex-shrink-0 w-12 h-12 bg-[#17335F] text-white rounded-full flex items-center justify-center font-bold text-lg">
                 5
-              </div>
+                )
               <div>
                 <h3 className="text-xl font-semibold text-[#17335F] mb-2">Confirm your intention to delete</h3>
                 <p className="text-gray-700">
                   Follow the confirmation prompts to permanently delete your account. This action cannot be undone.
                 </p>
-              </div>
-            </div>
-          </div>
+                )
+              )
+            )
 
           {/* Important Information */}
           <div className="mt-16 bg-red-50 border border-red-200 rounded-lg p-8">
@@ -131,8 +130,8 @@ export default function DeleteAccountPage() {
                 appear as being sent from a "deleted user."
               </p>
               <p className="font-semibold">This action is permanent and cannot be reversed.</p>
-            </div>
-          </div>
+              )
+            )
 
           {/* Need Help Section */}
           <div className="mt-12 bg-blue-50 border border-blue-200 rounded-lg p-8 text-center">
@@ -154,12 +153,14 @@ export default function DeleteAccountPage() {
               >
                 Privacy Policy
               </Link>
-            </div>
-          </div>
-        </div>
+              )
+            )
+          )
       </section>
 
-      <Footer />
-    </div>
+      )
+  )
+}
+
   )
 }

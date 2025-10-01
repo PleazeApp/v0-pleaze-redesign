@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-import Footer from "@/components/footer"
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -88,7 +87,7 @@ export default function AskJimmyPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* Header - Matching Homepage Design */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b">
         <div className="container mx-auto px-4">
@@ -121,7 +120,7 @@ export default function AskJimmyPage() {
                 <button className="flex items-center text-[#17335F] hover:text-[#788ED4] transition-colors">
                   Benefits <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
-              </div>
+                )
 
               <Link href="/#how-it-works" className="text-[#17335F] hover:text-[#788ED4] transition-colors">
                 How it Works
@@ -135,7 +134,7 @@ export default function AskJimmyPage() {
                 <button className="flex items-center text-[#17335F] hover:text-[#788ED4] transition-colors">
                   Support <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
-              </div>
+                )
 
               <Link href="/#blog" className="text-[#17335F] hover:text-[#788ED4] transition-colors">
                 Blog
@@ -147,13 +146,13 @@ export default function AskJimmyPage() {
               <Button className="bg-[#67D8AF] hover:bg-[#17335F] text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 min-h-[44px]">
                 Download App
               </Button>
-            </div>
+              )
 
             {/* Mobile Menu Button */}
             <Button className="lg:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
-          </div>
+            )
 
           {/* Dropdown Content */}
           {activeDropdown && (
@@ -172,17 +171,17 @@ export default function AskJimmyPage() {
                       <div className="flex items-start space-x-4">
                         <div className="w-12 h-12 bg-[#67D8AF] rounded-full flex items-center justify-center text-white flex-shrink-0">
                           {item.icon}
-                        </div>
+                          )
                         <div>
                           <h3 className="text-white font-semibold text-lg mb-2">{item.title}</h3>
                           <p className="text-white/80 text-sm leading-relaxed">{item.description}</p>
-                        </div>
-                      </div>
-                    </div>
+                          )
+                        )
+                      )
                   ))}
-                </div>
-              </div>
-            </div>
+                  )
+                )
+              )
           )}
 
           {/* Mobile Menu */}
@@ -207,16 +206,16 @@ export default function AskJimmyPage() {
                 <Button className="w-full bg-[#67D8AF] hover:bg-[#17335F] text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 min-h-[44px] text-base font-medium">
                   Download App
                 </Button>
-              </div>
-            </div>
+                )
+              )
           )}
-        </div>
+          )
       </header>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#17335F] via-[#788ED4] to-[#67D8AF] opacity-90"></div>
-        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#17335F] via-[#788ED4] to-[#67D8AF] opacity-90">  )
+        <div className="absolute inset-0 bg-black/10">  )
 
         <div className="relative container mx-auto px-4 py-20 lg:py-32 z-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -244,20 +243,20 @@ export default function AskJimmyPage() {
                   Now, I'm here to share what I've learned and help in any way I can. Ask me anything, it's 100%
                   confidential.
                 </p>
-              </div>
+                )
 
               <div className="flex flex-col items-start space-y-4">
                 <div className="flex items-center space-x-6">
                   <div className="flex items-center gap-2">
                     <Shield className="w-5 h-5 text-white/90" />
                     <span className="text-white/90 text-sm font-medium">100% Confidential</span>
-                  </div>
+                    )
                   <div className="flex items-center gap-2">
                     <Heart className="w-5 h-5 text-white/90" />
                     <span className="text-white/90 text-sm font-medium">Zero Judgment</span>
-                  </div>
-                </div>
-              </div>
+                    )
+                  )
+                )
 
               <Button
                 onClick={() => document.getElementById("ask-form")?.scrollIntoView({ behavior: "smooth" })}
@@ -266,7 +265,7 @@ export default function AskJimmyPage() {
                 Ask Your Question
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-            </div>
+              )
 
             {/* Jimmy's Photo */}
             <div className="relative">
@@ -279,12 +278,12 @@ export default function AskJimmyPage() {
                     height={320}
                     className="w-full h-full object-cover"
                   />
-                </div>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#67D8AF]/20 to-[#788ED4]/20 blur-3xl"></div>
-            </div>
-          </div>
-        </div>
+                  )
+                )
+              <div className="absolute inset-0 bg-gradient-to-r from-[#67D8AF]/20 to-[#788ED4]/20 blur-3xl">  )
+              )
+            )
+          )
       </section>
 
       {/* Why Ask Jimmy Section */}
@@ -295,7 +294,7 @@ export default function AskJimmyPage() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Get answers from someone who truly understands your journey
             </p>
-          </div>
+            )
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {/* Lived Experience */}
@@ -303,11 +302,11 @@ export default function AskJimmyPage() {
               <CardContent className="p-8 text-center space-y-6">
                 <div className="w-20 h-20 bg-[#67D8AF] rounded-full flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-110">
                   <UserCheck className="h-10 w-10 text-white" />
-                </div>
+                  )
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-[#17335F]">Lived Experience</h3>
                   <p className="text-gray-600 leading-relaxed">I've been where you are & I know how tough it can be.</p>
-                </div>
+                  )
               </CardContent>
             </Card>
 
@@ -316,11 +315,11 @@ export default function AskJimmyPage() {
               <CardContent className="p-8 text-center space-y-6">
                 <div className="w-20 h-20 bg-[#788ED4] rounded-full flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-110">
                   <Heart className="h-10 w-10 text-white" />
-                </div>
+                  )
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-[#17335F]">Zero Judgment</h3>
                   <p className="text-gray-600 leading-relaxed">This is a safe, supportive space to ask anything.</p>
-                </div>
+                  )
               </CardContent>
             </Card>
 
@@ -329,13 +328,13 @@ export default function AskJimmyPage() {
               <CardContent className="p-8 text-center space-y-6">
                 <div className="w-20 h-20 bg-[#17335F] rounded-full flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-110">
                   <MessageCircle className="h-10 w-10 text-white" />
-                </div>
+                  )
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-[#17335F]">Personal Connection</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Every answer comes directly from me, not an AI or automated reply.
                   </p>
-                </div>
+                  )
               </CardContent>
             </Card>
 
@@ -344,17 +343,17 @@ export default function AskJimmyPage() {
               <CardContent className="p-8 text-center space-y-6">
                 <div className="w-20 h-20 bg-[#D28FF2] rounded-full flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-110">
                   <CheckCircle className="h-10 w-10 text-white" />
-                </div>
+                  )
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-[#17335F]">Practical Advice</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Actionable tips, encouragement, and real-world resources.
                   </p>
-                </div>
+                  )
               </CardContent>
             </Card>
-          </div>
-        </div>
+            )
+          )
       </section>
 
       {/* The Process Section */}
@@ -363,7 +362,7 @@ export default function AskJimmyPage() {
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-[#17335F]">The Process</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">Simple steps to get the support you need</p>
-          </div>
+            )
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {/* Step 1 */}
@@ -371,16 +370,16 @@ export default function AskJimmyPage() {
               <CardContent className="p-8 text-center space-y-6">
                 <div className="w-20 h-20 bg-[#67D8AF] rounded-full flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-110">
                   <Send className="h-10 w-10 text-white" />
-                </div>
+                  )
                 <div className="space-y-4">
                   <div className="w-8 h-8 bg-[#17335F] text-white rounded-full flex items-center justify-center mx-auto text-sm font-bold">
                     1
-                  </div>
+                    )
                   <h3 className="text-2xl font-bold text-[#17335F]">Submit Your Question</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Use the form below. You can share as much or as little detail as you like.
                   </p>
-                </div>
+                  )
               </CardContent>
             </Card>
 
@@ -389,17 +388,17 @@ export default function AskJimmyPage() {
               <CardContent className="p-8 text-center space-y-6">
                 <div className="w-20 h-20 bg-[#788ED4] rounded-full flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-110">
                   <MessageCircle className="h-10 w-10 text-white" />
-                </div>
+                  )
                 <div className="space-y-4">
                   <div className="w-8 h-8 bg-[#17335F] text-white rounded-full flex items-center justify-center mx-auto text-sm font-bold">
                     2
-                  </div>
+                    )
                   <h3 className="text-2xl font-bold text-[#17335F]">Get a Response</h3>
                   <p className="text-gray-600 leading-relaxed">
                     I'll personally read and respond to your question, either privately or (with your permission) on our
                     community feed.
                   </p>
-                </div>
+                  )
               </CardContent>
             </Card>
 
@@ -408,20 +407,20 @@ export default function AskJimmyPage() {
               <CardContent className="p-8 text-center space-y-6">
                 <div className="w-20 h-20 bg-[#17335F] rounded-full flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-110">
                   <Users className="h-10 w-10 text-white" />
-                </div>
+                  )
                 <div className="space-y-4">
                   <div className="w-8 h-8 bg-[#17335F] text-white rounded-full flex items-center justify-center mx-auto text-sm font-bold">
                     3
-                  </div>
+                    )
                   <h3 className="text-2xl font-bold text-[#17335F]">Stay Connected</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Join the conversation and learn from others' questions, too.
                   </p>
-                </div>
+                  )
               </CardContent>
             </Card>
-          </div>
-        </div>
+            )
+          )
       </section>
 
       {/* Ask Jimmy Form */}
@@ -431,7 +430,7 @@ export default function AskJimmyPage() {
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-4xl lg:text-5xl font-bold text-[#17335F]">Ask Jimmy Form</h2>
               <p className="text-xl text-gray-600">Your question matters. Let's talk about it.</p>
-            </div>
+              )
 
             <Card className="border-0 shadow-xl">
               <CardContent className="p-8">
@@ -449,7 +448,7 @@ export default function AskJimmyPage() {
                       placeholder="Your name"
                       className="min-h-[44px] text-base"
                     />
-                  </div>
+                    )
 
                   {/* Email Field */}
                   <div className="space-y-2">
@@ -467,7 +466,7 @@ export default function AskJimmyPage() {
                       required
                       className="min-h-[44px] text-base"
                     />
-                  </div>
+                    )
 
                   {/* Question Field */}
                   <div className="space-y-2">
@@ -484,7 +483,7 @@ export default function AskJimmyPage() {
                       rows={6}
                       className="text-base resize-none"
                     />
-                  </div>
+                    )
 
                   {/* Privacy Options */}
                   <div className="space-y-4">
@@ -499,7 +498,7 @@ export default function AskJimmyPage() {
                         <Label htmlFor="keepPrivate" className="text-base cursor-pointer">
                           Keep my question private.
                         </Label>
-                      </div>
+                        )
                       <div className="flex items-center space-x-3">
                         <Checkbox
                           id="shareAnonymously"
@@ -509,9 +508,9 @@ export default function AskJimmyPage() {
                         <Label htmlFor="shareAnonymously" className="text-base cursor-pointer">
                           Share anonymously on the Pleaze community feed.
                         </Label>
-                      </div>
-                    </div>
-                  </div>
+                        )
+                      )
+                    )
 
                   {/* Submit Button */}
                   <div className="pt-4">
@@ -523,12 +522,12 @@ export default function AskJimmyPage() {
                       Submit Your Question
                       <Send className="ml-2 h-5 w-5" />
                     </Button>
-                  </div>
+                    )
                 </form>
               </CardContent>
             </Card>
-          </div>
-        </div>
+            )
+          )
       </section>
 
       {/* Privacy Assurance */}
@@ -540,19 +539,19 @@ export default function AskJimmyPage() {
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-[#17335F] rounded-full flex items-center justify-center flex-shrink-0">
                     <Lock className="h-6 w-6 text-white" />
-                  </div>
+                    )
                   <div className="space-y-4">
                     <h3 className="text-2xl font-bold text-[#17335F]">Privacy Assurance</h3>
                     <p className="text-gray-700 leading-relaxed text-lg">
                       Your trust matters to me. Your email and personal details will never be shared without your
                       permission.
                     </p>
-                  </div>
-                </div>
+                    )
+                  )
               </CardContent>
             </Card>
-          </div>
-        </div>
+            )
+          )
       </section>
 
       {/* A Message from Jimmy */}
@@ -570,7 +569,7 @@ export default function AskJimmyPage() {
                       height={96}
                       className="w-full h-full object-cover"
                     />
-                  </div>
+                    )
                   <div className="space-y-6">
                     <h3 className="text-3xl font-bold text-[#17335F]">A Message from Jimmy</h3>
                     <blockquote className="text-xl text-gray-700 italic leading-relaxed max-w-3xl mx-auto">
@@ -578,12 +577,12 @@ export default function AskJimmyPage() {
                       there for you — no stigma, no shame, just real talk. Ask me anything."
                     </blockquote>
                     <p className="text-lg font-semibold text-[#17335F]">— Jimmy, Founder of Pleaze</p>
-                  </div>
-                </div>
+                    )
+                  )
               </CardContent>
             </Card>
-          </div>
-        </div>
+            )
+          )
       </section>
 
       {/* Final Call-to-Action */}
@@ -600,28 +599,27 @@ export default function AskJimmyPage() {
                 Ask Jimmy Your Question
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-            </div>
+              )
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-white/80 mt-8">
               <div className="flex items-center gap-2">
                 <Shield className="w-5 h-5" />
                 <span className="text-sm font-medium">100% Confidential</span>
-              </div>
+                )
               <div className="flex items-center gap-2">
                 <Heart className="w-5 h-5" />
                 <span className="text-sm font-medium">Zero Judgment</span>
-              </div>
+                )
               <div className="flex items-center gap-2">
                 <MessageCircle className="w-5 h-5" />
                 <span className="text-sm font-medium">Personal Response</span>
-              </div>
-            </div>
-          </div>
-        </div>
+                )
+              )
+            )
+          )
       </section>
 
       {/* Footer */}
-      <Footer />
-    </div>
+      )
   )
 }

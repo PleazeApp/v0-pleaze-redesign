@@ -2,26 +2,10 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import {
-  ChevronDown,
-  Menu,
-  X,
-  Shield,
-  Newspaper,
-  BookOpen,
-  GraduationCap,
-  User,
-  Heart,
-  Building2,
-  Stethoscope,
-  MessageCircle,
-  PenLine,
-  Users,
-  Library,
-  FileText
-} from "lucide-react"
+import { ChevronDown, Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { megaMenuContent } from "@/lib/navigation"
 
 export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
@@ -33,113 +17,6 @@ export default function Header() {
 
   const handleMouseLeave = () => {
     setActiveDropdown(null)
-  }
-
-  const megaMenuContent = {
-    features: [
-      {
-        icon: <Shield className="h-6 w-6" />,
-        title: "Help Buttons",
-        description: "Instantly alert your support network during a crisis with one tap.",
-        href: "/features/help-buttons",
-      },
-      {
-        icon: <Newspaper className="h-6 w-6" />,
-        title: "News Feed",
-        description: "Stay informed with curated mental health news and community stories.",
-        href: "/features/news-feed",
-      },
-      {
-        icon: <BookOpen className="h-6 w-6" />,
-        title: "Personal Hub",
-        description: "Your private space for journaling, tracking progress, and reflection.",
-        href: "/features/personal-hub",
-      },
-      {
-        icon: <GraduationCap className="h-6 w-6" />,
-        title: "Training Resources",
-        description: "Learn how to support others with professional training modules.",
-        href: "/features/training-resources",
-      },
-    ],
-    about: [
-      {
-        icon: <User className="h-6 w-6" />,
-        title: "For Individuals",
-        description: "Personal tools and support for your mental health journey.",
-        href: "/for-individuals",
-      },
-      {
-        icon: <Heart className="h-6 w-6" />,
-        title: "For Loved Ones",
-        description: "Resources to help you support family and friends effectively.",
-        href: "/for-loved-ones",
-      },
-      {
-        icon: <Building2 className="h-6 w-6" />,
-        title: "For Institutions",
-        description: "Comprehensive solutions for schools, workplaces, and organizations.",
-        href: "/for-institutions",
-      },
-      {
-        icon: <Stethoscope className="h-6 w-6" />,
-        title: "For Professionals",
-        description: "Tools and resources designed for mental health practitioners.",
-        href: "/for-professionals",
-      },
-    ],
-    community: [
-      {
-        icon: <MessageCircle className="h-6 w-6" />,
-        title: "Contact Us",
-        description: "Get in touch with our team for support and inquiries.",
-        href: "/contact",
-      },
-      {
-        icon: <PenLine className="h-6 w-6" />,
-        title: "Share Your Story",
-        description: "Inspire others by sharing your mental health journey.",
-        href: "/share-your-story",
-      },
-      {
-        icon: <Users className="h-6 w-6" />,
-        title: "Ask Jimmy",
-        description: "Get personalized guidance from our AI-powered mental health assistant.",
-        href: "/ask-jimmy",
-      },
-      {
-        icon: <FileText className="h-6 w-6" />,
-        title: "Write For Us",
-        description: "Contribute articles and insights to our community blog.",
-        href: "/write-for-us",
-      },
-    ],
-    resources: [
-      {
-        icon: <BookOpen className="h-6 w-6" />,
-        title: "Blog",
-        description: "Read the latest articles on mental health and addiction recovery.",
-        href: "/blog",
-      },
-      {
-        icon: <Library className="h-6 w-6" />,
-        title: "Resource Hub",
-        description: "Access comprehensive mental health resources and support services.",
-        href: "/resource-hub",
-      },
-      {
-        icon: <Newspaper className="h-6 w-6" />,
-        title: "Newsletter",
-        description: "Stay updated with our weekly mental health insights and tips.",
-        href: "/newsletter",
-      },
-      {
-        icon: <FileText className="h-6 w-6" />,
-        title: "Sources",
-        description: "Explore the research and sources behind our content.",
-        href: "/sources",
-      },
-    ],
   }
 
   return (
@@ -227,28 +104,31 @@ export default function Header() {
           <div className="absolute left-0 right-0 bg-white shadow-2xl border-t">
             <div className="container mx-auto px-4 py-8">
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {megaMenuContent[activeDropdown as keyof typeof megaMenuContent]?.map((item, index) => (
-                  <Link
-                    key={index}
-                    href={item.href}
-                    className="group p-6 rounded-xl hover:bg-gradient-to-br hover:from-[#17335F]/5 hover:to-[#67D8AF]/5 transition-all duration-300 border border-transparent hover:border-[#67D8AF]/20"
-                    onClick={() => setActiveDropdown(null)}
-                  >
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-[#67D8AF] to-[#788ED4] rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                        {item.icon}
+                {megaMenuContent[activeDropdown as keyof typeof megaMenuContent]?.map((item, index) => {
+                  const IconComponent = item.icon
+                  return (
+                    <Link
+                      key={index}
+                      href={item.href}
+                      className="group p-6 rounded-xl hover:bg-gradient-to-br hover:from-[#17335F]/5 hover:to-[#67D8AF]/5 transition-all duration-300 border border-transparent hover:border-[#67D8AF]/20"
+                      onClick={() => setActiveDropdown(null)}
+                    >
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-gradient-to-br from-[#67D8AF] to-[#788ED4] rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                          <IconComponent className="h-6 w-6" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-[#17335F] font-semibold text-lg mb-2 group-hover:text-[#788ED4] transition-colors">
+                            {item.title}
+                          </h3>
+                          <p className="text-gray-600 text-sm leading-relaxed">
+                            {item.description}
+                          </p>
+                        </div>
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-[#17335F] font-semibold text-lg mb-2 group-hover:text-[#788ED4] transition-colors">
-                          {item.title}
-                        </h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
+                    </Link>
+                  )
+                })}
               </div>
             </div>
           </div>
@@ -262,21 +142,24 @@ export default function Header() {
               <div>
                 <h3 className="text-[#17335F] font-semibold mb-3 px-2">Features</h3>
                 <div className="space-y-2">
-                  {megaMenuContent.features.map((item, index) => (
-                    <Link
-                      key={index}
-                      href={item.href}
-                      className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      <div className="w-10 h-10 bg-gradient-to-br from-[#67D8AF] to-[#788ED4] rounded-lg flex items-center justify-center text-white flex-shrink-0">
-                        {item.icon}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-[#17335F] font-medium text-sm">{item.title}</p>
-                      </div>
-                    </Link>
-                  ))}
+                  {megaMenuContent.features.map((item, index) => {
+                    const IconComponent = item.icon
+                    return (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        <div className="w-10 h-10 bg-gradient-to-br from-[#67D8AF] to-[#788ED4] rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                          <IconComponent className="h-5 w-5" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-[#17335F] font-medium text-sm">{item.title}</p>
+                        </div>
+                      </Link>
+                    )
+                  })}
                 </div>
               </div>
 
@@ -284,21 +167,24 @@ export default function Header() {
               <div>
                 <h3 className="text-[#17335F] font-semibold mb-3 px-2">About</h3>
                 <div className="space-y-2">
-                  {megaMenuContent.about.map((item, index) => (
-                    <Link
-                      key={index}
-                      href={item.href}
-                      className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      <div className="w-10 h-10 bg-gradient-to-br from-[#67D8AF] to-[#788ED4] rounded-lg flex items-center justify-center text-white flex-shrink-0">
-                        {item.icon}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-[#17335F] font-medium text-sm">{item.title}</p>
-                      </div>
-                    </Link>
-                  ))}
+                  {megaMenuContent.about.map((item, index) => {
+                    const IconComponent = item.icon
+                    return (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        <div className="w-10 h-10 bg-gradient-to-br from-[#67D8AF] to-[#788ED4] rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                          <IconComponent className="h-5 w-5" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-[#17335F] font-medium text-sm">{item.title}</p>
+                        </div>
+                      </Link>
+                    )
+                  })}
                 </div>
               </div>
 
@@ -306,21 +192,24 @@ export default function Header() {
               <div>
                 <h3 className="text-[#17335F] font-semibold mb-3 px-2">Contact</h3>
                 <div className="space-y-2">
-                  {megaMenuContent.community.map((item, index) => (
-                    <Link
-                      key={index}
-                      href={item.href}
-                      className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      <div className="w-10 h-10 bg-gradient-to-br from-[#67D8AF] to-[#788ED4] rounded-lg flex items-center justify-center text-white flex-shrink-0">
-                        {item.icon}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-[#17335F] font-medium text-sm">{item.title}</p>
-                      </div>
-                    </Link>
-                  ))}
+                  {megaMenuContent.community.map((item, index) => {
+                    const IconComponent = item.icon
+                    return (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        <div className="w-10 h-10 bg-gradient-to-br from-[#67D8AF] to-[#788ED4] rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                          <IconComponent className="h-5 w-5" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-[#17335F] font-medium text-sm">{item.title}</p>
+                        </div>
+                      </Link>
+                    )
+                  })}
                 </div>
               </div>
 
@@ -328,21 +217,24 @@ export default function Header() {
               <div>
                 <h3 className="text-[#17335F] font-semibold mb-3 px-2">Resources</h3>
                 <div className="space-y-2">
-                  {megaMenuContent.resources.map((item, index) => (
-                    <Link
-                      key={index}
-                      href={item.href}
-                      className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      <div className="w-10 h-10 bg-gradient-to-br from-[#67D8AF] to-[#788ED4] rounded-lg flex items-center justify-center text-white flex-shrink-0">
-                        {item.icon}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-[#17335F] font-medium text-sm">{item.title}</p>
-                      </div>
-                    </Link>
-                  ))}
+                  {megaMenuContent.resources.map((item, index) => {
+                    const IconComponent = item.icon
+                    return (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        <div className="w-10 h-10 bg-gradient-to-br from-[#67D8AF] to-[#788ED4] rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                          <IconComponent className="h-5 w-5" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-[#17335F] font-medium text-sm">{item.title}</p>
+                        </div>
+                      </Link>
+                    )
+                  })}
                 </div>
               </div>
 

@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-import Footer from "@/components/footer"
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -91,7 +90,7 @@ export default function ShareYourStoryPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* Header - Matching Homepage Design */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b">
         <div className="container mx-auto px-4">
@@ -124,7 +123,7 @@ export default function ShareYourStoryPage() {
                 <button className="flex items-center text-[#17335F] hover:text-[#788ED4] transition-colors">
                   Benefits <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
-              </div>
+                )
 
               <Link href="/#how-it-works" className="text-[#17335F] hover:text-[#788ED4] transition-colors">
                 How it Works
@@ -138,7 +137,7 @@ export default function ShareYourStoryPage() {
                 <button className="flex items-center text-[#17335F] hover:text-[#788ED4] transition-colors">
                   Support <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
-              </div>
+                )
 
               <Link href="/#blog" className="text-[#17335F] hover:text-[#788ED4] transition-colors">
                 Blog
@@ -150,13 +149,13 @@ export default function ShareYourStoryPage() {
               <Button className="bg-[#67D8AF] hover:bg-[#17335F] text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 min-h-[44px]">
                 Download App
               </Button>
-            </div>
+              )
 
             {/* Mobile Menu Button */}
             <Button className="lg:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
-          </div>
+            )
 
           {/* Dropdown Content */}
           {activeDropdown && (
@@ -175,17 +174,17 @@ export default function ShareYourStoryPage() {
                       <div className="flex items-start space-x-4">
                         <div className="w-12 h-12 bg-[#67D8AF] rounded-full flex items-center justify-center text-white flex-shrink-0">
                           {item.icon}
-                        </div>
+                          )
                         <div>
                           <h3 className="text-white font-semibold text-lg mb-2">{item.title}</h3>
                           <p className="text-white/80 text-sm leading-relaxed">{item.description}</p>
-                        </div>
-                      </div>
-                    </div>
+                          )
+                        )
+                      )
                   ))}
-                </div>
-              </div>
-            </div>
+                  )
+                )
+              )
           )}
 
           {/* Mobile Menu */}
@@ -210,16 +209,16 @@ export default function ShareYourStoryPage() {
                 <Button className="w-full bg-[#67D8AF] hover:bg-[#17335F] text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 min-h-[44px] text-base font-medium">
                   Download App
                 </Button>
-              </div>
-            </div>
+                )
+              )
           )}
-        </div>
+          )
       </header>
 
       {/* Hero Section - Matching Homepage Style */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#17335F] via-[#788ED4] to-[#67D8AF] opacity-90"></div>
-        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#17335F] via-[#788ED4] to-[#67D8AF] opacity-90">  )
+        <div className="absolute inset-0 bg-black/10">  )
 
         <div className="relative container mx-auto px-4 py-20 lg:py-32 z-20">
           <div className="text-center text-white space-y-8 max-w-4xl mx-auto">
@@ -238,7 +237,7 @@ export default function ShareYourStoryPage() {
                 Sharing your mental health or addiction journey can bring hope, strength, and connection to thousands.
                 Join the Pleaze community by telling your story anonymously or openly and make a difference today.
               </p>
-            </div>
+              )
 
             <div className="flex flex-col items-center space-y-4">
               <div className="flex items-center space-x-6">
@@ -253,15 +252,15 @@ export default function ShareYourStoryPage() {
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
-                  </div>
+                    )
                   <span className="text-white/90 text-sm font-medium">Trusted Community</span>
-                </div>
+                  )
                 <div className="flex items-center gap-2">
                   <Shield className="w-5 h-5 text-white/90" />
                   <span className="text-white/90 text-sm font-medium">Safe & Secure</span>
-                </div>
-              </div>
-            </div>
+                  )
+                )
+              )
 
             <Button
               onClick={() => document.getElementById("share-form")?.scrollIntoView({ behavior: "smooth" })}
@@ -270,8 +269,8 @@ export default function ShareYourStoryPage() {
               Share Your Story Now
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-          </div>
-        </div>
+            )
+          )
       </section>
 
       {/* Why Share Section - Matching Homepage Card Style */}
@@ -282,7 +281,7 @@ export default function ShareYourStoryPage() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Your experience has the power to transform lives and create meaningful connections
             </p>
-          </div>
+            )
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {/* Give Hope */}
@@ -290,13 +289,13 @@ export default function ShareYourStoryPage() {
               <CardContent className="p-8 text-center space-y-6">
                 <div className="w-20 h-20 bg-[#67D8AF] rounded-full flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-110">
                   <Lightbulb className="h-10 w-10 text-white" />
-                </div>
+                  )
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-[#17335F]">Give Hope</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Your experience could be the light someone needs in their darkest moments.
                   </p>
-                </div>
+                  )
               </CardContent>
             </Card>
 
@@ -305,13 +304,13 @@ export default function ShareYourStoryPage() {
               <CardContent className="p-8 text-center space-y-6">
                 <div className="w-20 h-20 bg-[#788ED4] rounded-full flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-110">
                   <Shield className="h-10 w-10 text-white" />
-                </div>
+                  )
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-[#17335F]">Break Stigma</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Honest stories help normalise mental health and addiction struggles.
                   </p>
-                </div>
+                  )
               </CardContent>
             </Card>
 
@@ -320,11 +319,11 @@ export default function ShareYourStoryPage() {
               <CardContent className="p-8 text-center space-y-6">
                 <div className="w-20 h-20 bg-[#17335F] rounded-full flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-110">
                   <Users className="h-10 w-10 text-white" />
-                </div>
+                  )
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-[#17335F]">Build Community</h3>
                   <p className="text-gray-600 leading-relaxed">Connect with others who understand and support you.</p>
-                </div>
+                  )
               </CardContent>
             </Card>
 
@@ -333,17 +332,17 @@ export default function ShareYourStoryPage() {
               <CardContent className="p-8 text-center space-y-6">
                 <div className="w-20 h-20 bg-[#D28FF2] rounded-full flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-110">
                   <Heart className="h-10 w-10 text-white" />
-                </div>
+                  )
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-[#17335F]">Empower Yourself</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Sharing is a powerful step in healing and self-awareness.
                   </p>
-                </div>
+                  )
               </CardContent>
             </Card>
-          </div>
-        </div>
+            )
+          )
       </section>
 
       {/* How It Works Section - Matching Homepage Style */}
@@ -352,7 +351,7 @@ export default function ShareYourStoryPage() {
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-[#17335F]">How It Works</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">Share your story in just three simple steps</p>
-          </div>
+            )
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {/* Step 1 */}
@@ -360,16 +359,16 @@ export default function ShareYourStoryPage() {
               <CardContent className="p-8 text-center space-y-6">
                 <div className="w-20 h-20 bg-[#67D8AF] rounded-full flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-110">
                   <Edit3 className="h-10 w-10 text-white" />
-                </div>
+                  )
                 <div className="space-y-4">
                   <div className="w-8 h-8 bg-[#17335F] text-white rounded-full flex items-center justify-center mx-auto text-sm font-bold">
                     1
-                  </div>
+                    )
                   <h3 className="text-2xl font-bold text-[#17335F]">Write Your Story</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Tell us about your journey, challenges, and triumphs in your own words.
                   </p>
-                </div>
+                  )
               </CardContent>
             </Card>
 
@@ -378,16 +377,16 @@ export default function ShareYourStoryPage() {
               <CardContent className="p-8 text-center space-y-6">
                 <div className="w-20 h-20 bg-[#788ED4] rounded-full flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-110">
                   <Eye className="h-10 w-10 text-white" />
-                </div>
+                  )
                 <div className="space-y-4">
                   <div className="w-8 h-8 bg-[#17335F] text-white rounded-full flex items-center justify-center mx-auto text-sm font-bold">
                     2
-                  </div>
+                    )
                   <h3 className="text-2xl font-bold text-[#17335F]">Choose Your Privacy</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Submit anonymously or with your name, you decide what to share.
                   </p>
-                </div>
+                  )
               </CardContent>
             </Card>
 
@@ -396,20 +395,20 @@ export default function ShareYourStoryPage() {
               <CardContent className="p-8 text-center space-y-6">
                 <div className="w-20 h-20 bg-[#17335F] rounded-full flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-110">
                   <Share2 className="h-10 w-10 text-white" />
-                </div>
+                  )
                 <div className="space-y-4">
                   <div className="w-8 h-8 bg-[#17335F] text-white rounded-full flex items-center justify-center mx-auto text-sm font-bold">
                     3
-                  </div>
+                    )
                   <h3 className="text-2xl font-bold text-[#17335F]">Inspire Thousands</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Once reviewed, your story will be featured in the Pleaze News Feed to inspire others.
                   </p>
-                </div>
+                  )
               </CardContent>
             </Card>
-          </div>
-        </div>
+            )
+          )
       </section>
 
       {/* Share Your Story Form Section */}
@@ -419,7 +418,7 @@ export default function ShareYourStoryPage() {
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-4xl lg:text-5xl font-bold text-[#17335F]">Share Your Story</h2>
               <p className="text-xl text-gray-600">Your voice matters. Help others by sharing your experience.</p>
-            </div>
+              )
 
             <Card className="border-0 shadow-xl">
               <CardContent className="p-8">
@@ -438,7 +437,7 @@ export default function ShareYourStoryPage() {
                       placeholder="Your name"
                       className="min-h-[44px] text-base"
                     />
-                  </div>
+                    )
 
                   {/* Email Field */}
                   <div className="space-y-2">
@@ -458,7 +457,7 @@ export default function ShareYourStoryPage() {
                       required
                       className="min-h-[44px] text-base"
                     />
-                  </div>
+                    )
 
                   {/* Story Field */}
                   <div className="space-y-2">
@@ -476,7 +475,7 @@ export default function ShareYourStoryPage() {
                       rows={8}
                       className="text-base resize-none"
                     />
-                  </div>
+                    )
 
                   {/* Privacy Options */}
                   <div className="space-y-4">
@@ -491,7 +490,7 @@ export default function ShareYourStoryPage() {
                         <Label htmlFor="anonymous" className="text-base cursor-pointer">
                           Share Anonymously
                         </Label>
-                      </div>
+                        )
                       <div className="flex items-center space-x-3">
                         <Checkbox
                           id="withName"
@@ -501,9 +500,9 @@ export default function ShareYourStoryPage() {
                         <Label htmlFor="withName" className="text-base cursor-pointer">
                           Share With Name
                         </Label>
-                      </div>
-                    </div>
-                  </div>
+                        )
+                      )
+                    )
 
                   {/* Consent */}
                   <div className="space-y-4">
@@ -518,8 +517,8 @@ export default function ShareYourStoryPage() {
                         I consent to my story being published on Pleaze News Feed and understand it will be reviewed
                         before posting.
                       </Label>
-                    </div>
-                  </div>
+                      )
+                    )
 
                   {/* Submit Button */}
                   <div className="pt-4">
@@ -530,12 +529,12 @@ export default function ShareYourStoryPage() {
                     >
                       Share My Story
                     </Button>
-                  </div>
+                    )
                 </form>
               </CardContent>
             </Card>
-          </div>
-        </div>
+            )
+          )
       </section>
 
       {/* Privacy & Safety Note */}
@@ -547,19 +546,19 @@ export default function ShareYourStoryPage() {
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-[#17335F] rounded-full flex items-center justify-center flex-shrink-0">
                     <Lock className="h-6 w-6 text-white" />
-                  </div>
+                    )
                   <div className="space-y-4">
                     <h3 className="text-2xl font-bold text-[#17335F]">Privacy & Safety Note</h3>
                     <p className="text-gray-700 leading-relaxed text-lg">
                       Your privacy is our priority. We carefully review every story before publication to ensure it's
                       respectful and supportive. You control how much you share and can choose anonymity at any time.
                     </p>
-                  </div>
-                </div>
+                    )
+                  )
               </CardContent>
             </Card>
-          </div>
-        </div>
+            )
+          )
       </section>
 
       {/* Testimonials Section */}
@@ -570,7 +569,7 @@ export default function ShareYourStoryPage() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Hear from community members who found healing through sharing
             </p>
-          </div>
+            )
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Testimonial 1 */}
@@ -583,19 +582,19 @@ export default function ShareYourStoryPage() {
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
-                  </div>
+                    )
                   <blockquote className="text-lg text-gray-700 italic leading-relaxed">
                     "Sharing my story helped me heal and gave others courage to seek help."
                   </blockquote>
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 bg-[#67D8AF] rounded-full flex items-center justify-center">
                       <Users className="h-5 w-5 text-white" />
-                    </div>
+                      )
                     <div>
                       <p className="font-semibold text-[#17335F]">Pleaze Community Member</p>
-                    </div>
-                  </div>
-                </div>
+                      )
+                    )
+                  )
               </CardContent>
             </Card>
 
@@ -609,23 +608,23 @@ export default function ShareYourStoryPage() {
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
-                  </div>
+                    )
                   <blockquote className="text-lg text-gray-700 italic leading-relaxed">
                     "Reading others' stories reminded me I'm not alone. Now I'm proud to share mine."
                   </blockquote>
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 bg-[#788ED4] rounded-full flex items-center justify-center">
                       <Heart className="h-5 w-5 text-white" />
-                    </div>
+                      )
                     <div>
                       <p className="font-semibold text-[#17335F]">Pleaze User</p>
-                    </div>
-                  </div>
-                </div>
+                      )
+                    )
+                  )
               </CardContent>
             </Card>
-          </div>
-        </div>
+            )
+          )
       </section>
 
       {/* Call-to-Action Section - Matching Homepage Style */}
@@ -650,13 +649,12 @@ export default function ShareYourStoryPage() {
               >
                 Read Other Stories
               </Link>
-            </div>
-          </div>
-        </div>
+              )
+            )
+          )
       </section>
 
       {/* Footer */}
-      <Footer />
-    </div>
+      )
   )
 }

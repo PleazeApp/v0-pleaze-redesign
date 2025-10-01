@@ -1,6 +1,5 @@
 "use client"
 
-import PageLayout from "@/components/layout/page-layout"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Shield, BookOpen, Newspaper, User, ArrowRight, ChevronDown } from "lucide-react"
@@ -16,7 +15,7 @@ export default function FeaturesPage() {
   }
 
   return (
-    <PageLayout>
+    <>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#17335F] via-[#788ED4] to-[#67D8AF]">
@@ -494,6 +493,6 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-    </PageLayout>
+    </>
   )
 }

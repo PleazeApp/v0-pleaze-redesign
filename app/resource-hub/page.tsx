@@ -6,7 +6,6 @@ import { Heart, BookOpen, Users, Phone, ArrowRight, ExternalLink, ChevronDown } 
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
-import Footer from "@/components/footer"
 
 export default function ResourceHubPage() {
   const currentYear = new Date().getFullYear()
@@ -17,7 +16,7 @@ export default function ResourceHubPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* Header - Simple version for inner pages */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b">
         <div className="container mx-auto px-4">
@@ -53,13 +52,13 @@ export default function ResourceHubPage() {
             <Button className="bg-[#67D8AF] hover:bg-[#17335F] text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 min-h-[44px]">
               Download App
             </Button>
-          </div>
-        </div>
+            )
+          )
       </header>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#17335F] via-[#788ED4] to-[#67D8AF]">
-        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-black/10">  )
         <div className="relative container mx-auto px-4 py-20 lg:py-32 z-10">
           <div className="text-center text-white space-y-8 max-w-4xl mx-auto">
             <Badge className="bg-white/20 text-white border-white/30 hover:bg-white/30 mx-auto">Resource Hub</Badge>
@@ -85,9 +84,9 @@ export default function ResourceHubPage() {
               >
                 <Link href="#support-organizations">Find Support Organizations</Link>
               </Button>
-            </div>
-          </div>
-        </div>
+              )
+            )
+          )
       </section>
 
       {/* Crisis Resources Section */}
@@ -98,11 +97,11 @@ export default function ResourceHubPage() {
               <div className="flex items-center justify-center space-x-4">
                 <div className="w-16 h-16 bg-[#FF245F] rounded-2xl flex items-center justify-center">
                   <Phone className="h-8 w-8 text-white" />
-                </div>
+                  )
                 <h2 className="text-4xl lg:text-5xl font-bold text-[#17335F]">Crisis Resources</h2>
-              </div>
+                )
               <p className="text-2xl text-[#788ED4] font-medium">Immediate help when you need it most</p>
-            </div>
+              )
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Suicide Prevention */}
@@ -110,20 +109,20 @@ export default function ResourceHubPage() {
                 <div className="text-center space-y-6">
                   <div className="w-16 h-16 bg-[#FF245F] rounded-2xl flex items-center justify-center mx-auto">
                     <Heart className="h-8 w-8 text-white" />
-                  </div>
+                    )
                   <h3 className="text-2xl font-bold text-[#17335F]">Suicide Prevention</h3>
                   <div className="space-y-4">
                     <div className="bg-white rounded-xl p-4 border border-red-200">
                       <p className="font-semibold text-[#17335F] mb-2">Samaritans Ireland</p>
                       <p className="text-2xl font-bold text-[#FF245F] mb-2">116 123</p>
                       <p className="text-sm text-gray-600">Free 24/7 support</p>
-                    </div>
+                      )
                     <div className="bg-white rounded-xl p-4 border border-red-200">
                       <p className="font-semibold text-[#17335F] mb-2">Crisis Text Line</p>
                       <p className="text-xl font-bold text-[#FF245F] mb-2">Text "HELLO" to 50808</p>
                       <p className="text-sm text-gray-600">24/7 text support</p>
-                    </div>
-                  </div>
+                      )
+                    )
                   <Button
                     asChild
                     className="bg-[#FF245F] hover:bg-[#17335F] text-white px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105 w-full"
@@ -132,28 +131,28 @@ export default function ResourceHubPage() {
                       Visit Samaritans <ExternalLink className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                </div>
-              </div>
+                  )
+                )
 
               {/* Mental Health Support */}
               <div className="bg-gradient-to-b from-gray-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
                 <div className="text-center space-y-6">
                   <div className="w-16 h-16 bg-[#788ED4] rounded-2xl flex items-center justify-center mx-auto">
                     <BookOpen className="h-8 w-8 text-white" />
-                  </div>
+                    )
                   <h3 className="text-2xl font-bold text-[#17335F]">Mental Health Support</h3>
                   <div className="space-y-4">
                     <div className="bg-white rounded-xl p-4 border border-blue-200">
                       <p className="font-semibold text-[#17335F] mb-2">Mental Health Ireland</p>
                       <p className="text-2xl font-bold text-[#788ED4] mb-2">01 284 1166</p>
                       <p className="text-sm text-gray-600">Mon-Fri 9am-5pm</p>
-                    </div>
+                      )
                     <div className="bg-white rounded-xl p-4 border border-blue-200">
                       <p className="font-semibold text-[#17335F] mb-2">Aware Support Line</p>
                       <p className="text-xl font-bold text-[#788ED4] mb-2">1800 80 48 48</p>
                       <p className="text-sm text-gray-600">Mon-Sun 10am-10pm</p>
-                    </div>
-                  </div>
+                      )
+                    )
                   <Button
                     asChild
                     className="bg-[#788ED4] hover:bg-[#17335F] text-white px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105 w-full"
@@ -162,28 +161,28 @@ export default function ResourceHubPage() {
                       Visit Mental Health Ireland <ExternalLink className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                </div>
-              </div>
+                  )
+                )
 
               {/* Addiction Support */}
               <div className="bg-gradient-to-b from-gray-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100">
                 <div className="text-center space-y-6">
                   <div className="w-16 h-16 bg-[#67D8AF] rounded-2xl flex items-center justify-center mx-auto">
                     <Users className="h-8 w-8 text-white" />
-                  </div>
+                    )
                   <h3 className="text-2xl font-bold text-[#17335F]">Addiction Support</h3>
                   <div className="space-y-4">
                     <div className="bg-white rounded-xl p-4 border border-green-200">
                       <p className="font-semibold text-[#17335F] mb-2">HSE Drugs & Alcohol Helpline</p>
                       <p className="text-2xl font-bold text-[#67D8AF] mb-2">1800 459 459</p>
                       <p className="text-sm text-gray-600">Mon-Fri 9:30am-5:30pm</p>
-                    </div>
+                      )
                     <div className="bg-white rounded-xl p-4 border border-green-200">
                       <p className="font-semibold text-[#17335F] mb-2">Alcoholics Anonymous</p>
                       <p className="text-xl font-bold text-[#67D8AF] mb-2">01 842 0700</p>
                       <p className="text-sm text-gray-600">24/7 support</p>
-                    </div>
-                  </div>
+                      )
+                    )
                   <Button
                     asChild
                     className="bg-[#67D8AF] hover:bg-[#17335F] text-white px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105 w-full"
@@ -196,11 +195,11 @@ export default function ResourceHubPage() {
                       Visit HSE Addiction Services <ExternalLink className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                  )
+                )
+              )
+            )
+          )
       </section>
 
       {/* Support Organizations Section */}
@@ -213,7 +212,7 @@ export default function ResourceHubPage() {
                 Connect with trusted organizations that provide ongoing support, resources, and community for mental
                 health and addiction recovery.
               </p>
-            </div>
+              )
 
             <div className="grid md:grid-cols-2 gap-12">
               {/* Mental Health Organizations */}
@@ -225,7 +224,7 @@ export default function ResourceHubPage() {
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-[#788ED4] rounded-xl flex items-center justify-center flex-shrink-0">
                         <Heart className="h-6 w-6 text-white" />
-                      </div>
+                        )
                       <div className="flex-1">
                         <h4 className="text-xl font-bold text-[#17335F] mb-2">Pieta House</h4>
                         <p className="text-gray-600 mb-3">
@@ -238,16 +237,16 @@ export default function ResourceHubPage() {
                             </Link>
                           </Button>
                           <span className="text-sm text-gray-500 flex items-center">Call: 1800 247 247</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                          )
+                        )
+                      )
+                    )
 
                   <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-[#788ED4] rounded-xl flex items-center justify-center flex-shrink-0">
                         <BookOpen className="h-6 w-6 text-white" />
-                      </div>
+                        )
                       <div className="flex-1">
                         <h4 className="text-xl font-bold text-[#17335F] mb-2">Jigsaw</h4>
                         <p className="text-gray-600 mb-3">Mental health support for young people aged 12-25.</p>
@@ -257,16 +256,16 @@ export default function ResourceHubPage() {
                               Visit Website <ExternalLink className="ml-2 h-4 w-4" />
                             </Link>
                           </Button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                          )
+                        )
+                      )
+                    )
 
                   <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-[#788ED4] rounded-xl flex items-center justify-center flex-shrink-0">
                         <Users className="h-6 w-6 text-white" />
-                      </div>
+                        )
                       <div className="flex-1">
                         <h4 className="text-xl font-bold text-[#17335F] mb-2">SpunOut.ie</h4>
                         <p className="text-gray-600 mb-3">
@@ -278,12 +277,12 @@ export default function ResourceHubPage() {
                               Visit Website <ExternalLink className="ml-2 h-4 w-4" />
                             </Link>
                           </Button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
 
               {/* Addiction Support Organizations */}
               <div className="space-y-8">
@@ -294,7 +293,7 @@ export default function ResourceHubPage() {
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-[#67D8AF] rounded-xl flex items-center justify-center flex-shrink-0">
                         <Users className="h-6 w-6 text-white" />
-                      </div>
+                        )
                       <div className="flex-1">
                         <h4 className="text-xl font-bold text-[#17335F] mb-2">Narcotics Anonymous Ireland</h4>
                         <p className="text-gray-600 mb-3">
@@ -306,16 +305,16 @@ export default function ResourceHubPage() {
                               Visit Website <ExternalLink className="ml-2 h-4 w-4" />
                             </Link>
                           </Button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                          )
+                        )
+                      )
+                    )
 
                   <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-[#67D8AF] rounded-xl flex items-center justify-center flex-shrink-0">
                         <Heart className="h-6 w-6 text-white" />
-                      </div>
+                        )
                       <div className="flex-1">
                         <h4 className="text-xl font-bold text-[#17335F] mb-2">Al-Anon Ireland</h4>
                         <p className="text-gray-600 mb-3">
@@ -328,16 +327,16 @@ export default function ResourceHubPage() {
                             </Link>
                           </Button>
                           <span className="text-sm text-gray-500 flex items-center">Call: 01 873 2699</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                          )
+                        )
+                      )
+                    )
 
                   <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-[#67D8AF] rounded-xl flex items-center justify-center flex-shrink-0">
                         <BookOpen className="h-6 w-6 text-white" />
-                      </div>
+                        )
                       <div className="flex-1">
                         <h4 className="text-xl font-bold text-[#17335F] mb-2">Coolmine Therapeutic Community</h4>
                         <p className="text-gray-600 mb-3">
@@ -350,15 +349,15 @@ export default function ResourceHubPage() {
                             </Link>
                           </Button>
                           <span className="text-sm text-gray-500 flex items-center">Call: 01 281 1881</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
       </section>
 
       {/* Educational Resources Section */}
@@ -370,14 +369,14 @@ export default function ResourceHubPage() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Learn more about mental health and addiction through trusted educational materials and research.
               </p>
-            </div>
+              )
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-gradient-to-b from-purple-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="text-center space-y-6">
                   <div className="w-16 h-16 bg-[#D28FF2] rounded-2xl flex items-center justify-center mx-auto">
                     <BookOpen className="h-8 w-8 text-white" />
-                  </div>
+                    )
                   <h3 className="text-2xl font-bold text-[#17335F]">Understanding Mental Health</h3>
                   <p className="text-gray-600">
                     Comprehensive guides on various mental health conditions, symptoms, and treatment options.
@@ -394,14 +393,14 @@ export default function ResourceHubPage() {
                       Learn More <ExternalLink className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                </div>
-              </div>
+                  )
+                )
 
               <div className="bg-gradient-to-b from-yellow-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="text-center space-y-6">
                   <div className="w-16 h-16 bg-[#FFF6A6] rounded-2xl flex items-center justify-center mx-auto">
                     <Users className="h-8 w-8 text-black" />
-                  </div>
+                    )
                   <h3 className="text-2xl font-bold text-[#17335F]">Addiction Education</h3>
                   <p className="text-gray-600">
                     Evidence-based information about addiction, recovery processes, and support strategies.
@@ -414,14 +413,14 @@ export default function ResourceHubPage() {
                       Learn More <ExternalLink className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                </div>
-              </div>
+                  )
+                )
 
               <div className="bg-gradient-to-b from-cyan-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="text-center space-y-6">
                   <div className="w-16 h-16 bg-[#61EDEA] rounded-2xl flex items-center justify-center mx-auto">
                     <Heart className="h-8 w-8 text-black" />
-                  </div>
+                    )
                   <h3 className="text-2xl font-bold text-[#17335F]">Self-Care & Wellness</h3>
                   <p className="text-gray-600">
                     Practical tools and techniques for maintaining mental wellness and supporting recovery.
@@ -434,11 +433,11 @@ export default function ResourceHubPage() {
                       Learn More <ExternalLink className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                  )
+                )
+              )
+            )
+          )
       </section>
 
       {/* FAQ Section */}
@@ -450,7 +449,7 @@ export default function ResourceHubPage() {
               <p className="text-xl text-gray-600">
                 Common questions about accessing mental health and addiction resources
               </p>
-            </div>
+              )
 
             <div className="space-y-4">
               {/* FAQ Item 1 */}
@@ -478,9 +477,9 @@ export default function ResourceHubPage() {
                       activities, it may be time to seek professional help. Trust your instincts - if you feel something
                       isn't right, reaching out for support is always a positive step.
                     </p>
-                  </div>
-                </div>
-              </div>
+                    )
+                  )
+                )
 
               {/* FAQ Item 2 */}
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
@@ -507,9 +506,9 @@ export default function ResourceHubPage() {
                       pay. HSE mental health services are free for Irish residents. Contact the organizations directly
                       to learn about their specific fee structures and available support options.
                     </p>
-                  </div>
-                </div>
-              </div>
+                    )
+                  )
+                )
 
               {/* FAQ Item 3 */}
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
@@ -536,9 +535,9 @@ export default function ResourceHubPage() {
                       organizations also offer online chat services or email support. Take your time and move at your
                       own pace - the important thing is that you're taking steps toward getting support.
                     </p>
-                  </div>
-                </div>
-              </div>
+                    )
+                  )
+                )
 
               {/* FAQ Item 4 */}
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
@@ -566,10 +565,10 @@ export default function ResourceHubPage() {
                       Consider reaching out to organizations like Al-Anon if you're supporting someone with addiction
                       issues.
                     </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+                    )
+                  )
+                )
+              )
 
             {/* FAQ CTA */}
             <div className="text-center mt-16">
@@ -585,10 +584,10 @@ export default function ResourceHubPage() {
                     Contact Us <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-              </div>
-            </div>
-          </div>
-        </div>
+                )
+              )
+            )
+          )
       </section>
 
       {/* Download App Banner */}
@@ -618,8 +617,8 @@ export default function ResourceHubPage() {
                       className="rounded-xl hover:opacity-95 transition-all duration-300 cursor-pointer drop-shadow-2xl group-hover:drop-shadow-3xl"
                       style={{ width: "200px", height: "70px", objectFit: "fill" }}
                     />
-                    <div className="absolute inset-0 bg-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
+                    <div className="absolute inset-0 bg-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">  )
+                    )
                 </Link>
                 <Link
                   href="https://apps.apple.com/ie/app/pleaze-mental-health-help/id6502616534"
@@ -636,16 +635,15 @@ export default function ResourceHubPage() {
                       className="rounded-xl hover:opacity-95 transition-all duration-300 cursor-pointer drop-shadow-2xl group-hover:drop-shadow-3xl"
                       style={{ width: "200px", height: "70px", objectFit: "fill" }}
                     />
-                    <div className="absolute inset-0 bg-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
+                    <div className="absolute inset-0 bg-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">  )
+                    )
                 </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+                )
+              )
+            )
+          )
       </section>
 
-      <Footer />
-    </div>
+      )
   )
 }

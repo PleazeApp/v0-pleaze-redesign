@@ -1,4 +1,3 @@
-import PageLayout from "@/components/layout/page-layout"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, ArrowLeft } from "lucide-react"
 import Image from "next/image"
@@ -48,7 +47,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   })
 
   return (
-    <PageLayout>
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
@@ -218,6 +217,6 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           </div>
         </div>
       </section>
-    </PageLayout>
+    </>
   )
 }
