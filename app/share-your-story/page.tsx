@@ -11,23 +11,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
-import {
-  Heart,
-  Users,
-  Shield,
-  Lightbulb,
-  Edit3,
-  Eye,
-  Share2,
-  Lock,
-  ArrowRight,
-  ChevronDown,
-  Menu,
-  X,
-  BookOpen,
-  MessageCircle,
-  Headphones,
-} from "lucide-react"
+import { Heart, Users, Shield, Lightbulb, CreditCard as Edit3, Eye, Share2, Lock, ArrowRight, ChevronDown, Menu, X, BookOpen, MessageCircle, Headphones } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
